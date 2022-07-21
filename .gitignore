@@ -1,0 +1,7 @@
+/.idea
+/http
+/log
+/target
+/*.iml
+/**/node_modules
+/**/.vscode

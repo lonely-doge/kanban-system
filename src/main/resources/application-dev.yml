@@ -1,0 +1,43 @@
+server:
+  servlet:
+    context-path: /kanbanSystem
+  port: 10086
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_kanban?characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  redis:
+    port: 6379
+    host: 127.0.0.1
+    database: 0
+    password:
+    lettuce:
+      pool:
+        max-active: 8
+        min-idle: 10
+        max-wait: -1ms
+        max-idle: 30
+      shutdown-timeout: 100
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+  mvc:
+    dispatch-options-request: true
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: cn.edu.abtu.kanbansytem.bean.entity
+
+
+
+
+
+
+
+
+

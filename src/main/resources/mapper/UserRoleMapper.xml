@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.abtu.kanbansystem.mapper.UserRoleMapper">
+
+    <select id="selectRoleByUserId" parameterType="java.lang.String"
+            resultType="cn.edu.abtu.kanbansystem.bean.security.Role">
+        select sr.*
+        from sys_user_role sur
+                 left join sys_role sr on sur.role_id = sr.role_id
+        where sur.user_id = #{userId}
+    </select>
+</mapper>

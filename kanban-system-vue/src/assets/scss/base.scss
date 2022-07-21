@@ -1,0 +1,12 @@
+$design-kind: #2663eb;
+$develop-kind: #ec479a;
+$planning-kind: #0d9588;
+$test-kind: #f59e0b;
+$base-border: #dcdfe6;
+
+/*清除浮动 解决父级塌陷问题*/
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
